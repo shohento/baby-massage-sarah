@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>Baby Massage by Sarah</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Nunito:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{--cream:#FDF8F2;--warm:#F5EDE0;--blush:#EDD5BE;--peach:#D4956A;--terra:#B5673A;--sage:#8BA888;--deep:#3D2C1E;--wh:#FFFFFF}
+html{scroll-behavior:smooth}
+body{font-family:'Nunito',sans-serif;background:var(--cream);color:var(--deep);overflow-x:hidden}
+
+/* HEADER */
+header{position:sticky;top:0;z-index:100;background:rgba(253,248,242,0.96);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid rgba(212,149,106,0.15);padding:14px 20px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-family:'Playfair Display',serif;font-size:20px;font-weight:700;color:var(--deep)}
+.logo span{color:var(--peach)}
+.hbtn{background:var(--terra);color:#fff;border:none;border-radius:50px;padding:11px 22px;font-size:13px;font-weight:700;font-family:'Nunito',sans-serif;cursor:pointer;box-shadow:0 4px 16px rgba(181,103,58,0.35);transition:transform .2s}
+.hbtn:active{transform:scale(0.95)}
+
+/* HERO */
+#hero{background:linear-gradient(160deg,var(--warm) 0%,var(--cream) 65%);padding:48px 24px 56px;position:relative;overflow:hidden;text-align:center}
+.hblob{position:absolute;border-radius:50%;filter:blur(50px);pointer-events:none}
+.hb1{width:260px;height:260px;background:var(--blush);opacity:.4;top:-80px;right:-80px}
+.hb2{width:200px;height:200px;background:var(--sage);opacity:.25;bottom:-60px;left:-60px}
+.badge{display:inline-flex;align-items:center;gap:8px;background:var(--wh);border:1px solid var(--blush);border-radius:50px;padding:8px 18px;font-size:12px;font-weight:700;color:var(--terra);margin-bottom:24px;box-shadow:0 4px 16px rgba(212,149,106,0.12)}
+.badge::before{content:'';width:7px;height:7px;background:var(--sage);border-radius:50%;animation:blink 2s infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
+.hero-emoji{font-size:76px;display:block;margin-bottom:20px;animation:fl 4s ease-in-out infinite}
+@keyframes fl{0%,100%{transform:translateY(0) rotate(-3deg)}50%{transform:translateY(-10px) rotate(3deg)}}
+.htitle{font-family:'Playfair Display',serif;font-size:clamp(28px,8vw,46px);font-weight:700;line-height:1.15;margin-bottom:16px}
+.htitle em{color:var(--terra);font-style:italic}
+.hsub{font-size:15px;line-height:1.8;opacity:.65;margin-bottom:36px;max-width:340px;margin-left:auto;margin-right:auto}
+.hcta{display:flex;flex-direction:column;gap:12px;align-items:center}
+.bmain{width:100%;max-width:320px;background:var(--terra);color:#fff;border:none;border-radius:50px;padding:17px;font-size:16px;font-weight:700;font-family:'Nunito',sans-serif;cursor:pointer;box-shadow:0 8px 28px rgba(181,103,58,0.4);transition:transform .2s;text-decoration:none;display:block;text-align:center}
+.bmain:active{transform:scale(0.97)}
+.bghost{width:100%;max-width:320px;text-align:center;background:transparent;color:var(--terra);border:2px solid var(--blush);border-radius:50px;padding:15px;font-size:15px;font-weight:600;font-family:'Nunito',sans-serif;cursor:pointer;text-decoration:none;display:block;transition:background .2s}
+.bghost:active{background:var(--warm)}
+.stats{display:flex;justify-content:center;margin-top:44px;border-top:1px solid rgba(212,149,106,0.2);padding-top:28px}
+.st{flex:1;text-align:center;padding:0 8px}
+.st+.st{border-left:1px solid rgba(212,149,106,0.2)}
+.stn{font-family:'Playfair Display',serif;font-size:30px;font-weight:700;color:var(--terra);display:block;line-height:1}
+.stl{font-size:11px;opacity:.5;margin-top:6px;letter-spacing:.04em;display:block}
+
+/* SECTIONS */
+section{padding:56px 24px}
+.slbl{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--terra);font-weight:700;margin-bottom:12px}
+.stitle{font-family:'Playfair Display',serif;font-size:clamp(24px,6vw,34px);font-weight:700;line-height:1.2;margin-bottom:20px}
+.stitle em{color:var(--terra);font-style:italic}
+.sdesc{font-size:14px;line-height:1.85;opacity:.6;margin-bottom:36px}
+
+/* SERVICES */
+#services{background:var(--warm)}
+.slist{display:flex;flex-direction:column;gap:16px}
+.sc{background:var(--wh);border-radius:20px;padding:24px 20px;display:flex;align-items:flex-start;gap:16px;box-shadow:0 4px 20px rgba(61,44,30,.07);position:relative;overflow:hidden;transition:transform .2s}
+.sc::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--peach),var(--terra));transform:scaleX(0);transform-origin:left;transition:transform .35s}
+.sc:active{transform:scale(0.99)}
+.sc:active::before,.sc:hover::before{transform:scaleX(1)}
+.si{font-size:40px;flex-shrink:0;line-height:1}
+.sb{flex:1}
+.sn{font-family:'Playfair Display',serif;font-size:19px;font-weight:700;margin-bottom:8px}
+.st2{font-size:13px;line-height:1.75;opacity:.6;margin-bottom:14px}
+.sf{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px}
+.sp{font-family:'Playfair Display',serif;font-size:21px;font-weight:700;color:var(--terra)}
+.sp small{font-family:'Nunito',sans-serif;font-size:11px;opacity:.5;font-weight:400}
+.sbtn{background:var(--terra);color:#fff;border:none;border-radius:50px;padding:9px 20px;font-size:13px;font-weight:700;font-family:'Nunito',sans-serif;cursor:pointer;white-space:nowrap;transition:background .2s}
+.sbtn:active{background:var(--deep)}
+
+/* ABOUT */
+#about{background:var(--cream)}
+.acard{background:linear-gradient(135deg,var(--peach) 0%,var(--terra) 100%);border-radius:22px;padding:28px 22px;color:#fff;margin-bottom:28px;display:flex;align-items:center;gap:18px;box-shadow:0 12px 40px rgba(181,103,58,0.3)}
+.aavatar{font-size:56px;flex-shrink:0}
+.aname{font-family:'Playfair Display',serif;font-size:22px;font-weight:700;margin-bottom:4px}
+.arole{font-size:12px;opacity:.8;letter-spacing:.04em;line-height:1.5}
+.flist{display:flex;flex-direction:column;gap:0}
+.feat{display:flex;align-items:center;gap:14px;padding:14px 0;border-bottom:1px solid rgba(61,44,30,.08);font-size:14px;line-height:1.5}
+.feat:last-child{border-bottom:none}
+.fi{font-size:22px;flex-shrink:0;width:32px;text-align:center}
+
+/* PROCESS */
+#process{background:var(--deep);color:#fff}
+#process .stitle{color:#fff}
+#process .sdesc{color:rgba(255,255,255,.5)}
+.steps{display:flex;flex-direction:column}
+.step{display:flex;gap:18px;padding:22px 0;border-bottom:1px solid rgba(255,255,255,.07)}
+.step:last-child{border-bottom:none}
+.stepn{font-family:'Playfair Display',serif;font-size:40px;font-weight:700;color:rgba(212,149,106,.25);flex-shrink:0;width:52px;line-height:1}
+.stept{font-family:'Playfair Display',serif;font-size:18px;font-weight:700;color:#fff;margin-bottom:6px}
+.stepd{font-size:13px;line-height:1.75;color:rgba(255,255,255,.5)}
+
+/* GALLERY */
+#gallery{background:var(--warm)}
+.gscroll{display:flex;gap:14px;overflow-x:auto;padding-bottom:8px;-ms-overflow-style:none;scrollbar-width:none;scroll-snap-type:x mandatory;margin:0 -24px;padding:0 24px 8px}
+.gscroll::-webkit-scrollbar{display:none}
+.gc{flex-shrink:0;width:185px;height:230px;border-radius:18px;overflow:hidden;scroll-snap-align:start;position:relative;display:flex;align-items:center;justify-content:center;font-size:56px;box-shadow:0 8px 24px rgba(61,44,30,.12)}
+.gc1{background:linear-gradient(135deg,#f5dcc8,#e8b490)}
+.gc2{background:linear-gradient(135deg,#c8dfc5,#8ba888)}
+.gc3{background:linear-gradient(135deg,#e8c4a8,#d4956a)}
+.gc4{background:linear-gradient(135deg,#fce8d8,#f5c5a0)}
+.gc5{background:linear-gradient(135deg,#dde8dd,#a8c8a5)}
+.glbl{position:absolute;bottom:10px;left:8px;right:8px;background:rgba(255,255,255,.88);backdrop-filter:blur(8px);border-radius:10px;padding:7px 10px;font-size:11px;font-weight:700;color:var(--deep);text-align:center}
+
+/* REVIEWS */
+#reviews{background:var(--cream)}
+.rlist{display:flex;flex-direction:column;gap:14px}
+.rc{background:var(--wh);border-radius:20px;padding:22px 20px;box-shadow:0 4px 20px rgba(61,44,30,.07)}
+.rstars{color:#F0A500;font-size:15px;letter-spacing:2px;margin-bottom:12px}
+.rtxt{font-family:'Playfair Display',serif;font-size:16px;font-style:italic;line-height:1.6;margin-bottom:14px}
+.rauthor{display:flex;align-items:center;gap:12px}
+.ravatar{width:38px;height:38px;border-radius:50%;background:linear-gradient(135deg,var(--peach),var(--terra));display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0}
+.rname{font-size:14px;font-weight:700}
+.rmeta{font-size:11px;opacity:.4;margin-top:2px}
+
+/* FAQ */
+#faq{background:var(--warm)}
+.faqlist{display:flex;flex-direction:column;gap:10px}
+.faqitem{background:var(--wh);border-radius:14px;overflow:hidden;box-shadow:0 2px 12px rgba(61,44,30,.06)}
+.faqq{display:flex;align-items:center;justify-content:space-between;padding:16px 18px;cursor:pointer;user-select:none;font-size:14px;font-weight:600;gap:12px}
+.faqarr{font-size:18px;transition:transform .3s;flex-shrink:0;color:var(--terra)}
+.faqa{max-height:0;overflow:hidden;font-size:13px;line-height:1.8;opacity:.65;transition:max-height .35s ease,padding .3s ease;padding:0 18px}
+.faqitem.open .faqarr{transform:rotate(180deg)}
+.faqitem.open .faqa{max-height:200px;padding-bottom:16px}
+
+/* CTA */
+#cta{background:linear-gradient(140deg,var(--terra) 0%,var(--deep) 100%);color:#fff;text-align:center;padding:60px 24px}
+#cta .stitle{color:#fff}
+#cta .sdesc{color:rgba(255,255,255,.6)}
+.ctabtns{display:flex;flex-direction:column;gap:12px;max-width:320px;margin:0 auto}
+.cbt{display:flex;align-items:center;justify-content:center;gap:10px;border-radius:50px;padding:16px;font-size:15px;font-weight:700;font-family:'Nunito',sans-serif;text-decoration:none;transition:transform .2s}
+.cbt:active{transform:scale(0.97)}
+.ctg{background:#2AABEE;color:#fff;box-shadow:0 6px 20px rgba(42,171,238,.4)}
+.cwa{background:#25D366;color:#fff;box-shadow:0 6px 20px rgba(37,211,102,.4)}
+.cph{background:rgba(255,255,255,.15);color:#fff;border:1.5px solid rgba(255,255,255,.25)}
+
+/* FOOTER */
+footer{background:var(--deep);color:rgba(255,255,255,.4);text-align:center;padding:28px 24px;font-size:12px}
+footer span{color:var(--peach)}
+
+/* MODAL */
+.overlay{position:fixed;inset:0;z-index:200;background:rgba(20,12,4,.6);backdrop-filter:blur(6px);display:flex;align-items:flex-end;opacity:0;pointer-events:none;transition:opacity .3s}
+.overlay.active{opacity:1;pointer-events:all}
+.modal{background:var(--wh);border-radius:28px 28px 0 0;padding:28px 22px 44px;width:100%;max-height:92vh;overflow-y:auto;transform:translateY(100%);transition:transform .4s cubic-bezier(0.32,0.72,0,1);position:relative}
+.overlay.active .modal{transform:translateY(0)}
+.mhandle{width:40px;height:4px;background:rgba(0,0,0,.12);border-radius:4px;margin:0 auto 22px}
+.mtitle{font-family:'Playfair Display',serif;font-size:22px;font-weight:700;margin-bottom:4px}
+.msub{font-size:13px;opacity:.5;margin-bottom:24px}
+.fg{margin-bottom:16px}
+.flbl{font-size:11px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;opacity:.5;margin-bottom:7px;display:block}
+.finp,.fsel,.ftxt{width:100%;border:1.5px solid rgba(212,149,106,.3);border-radius:12px;padding:13px 15px;font-size:15px;font-family:'Nunito',sans-serif;color:var(--deep);background:var(--cream);outline:none;transition:border-color .2s;appearance:none;-webkit-appearance:none}
+.finp:focus,.fsel:focus,.ftxt:focus{border-color:var(--terra)}
+.ftxt{resize:none;height:80px}
+.chips{display:flex;flex-wrap:wrap;gap:9px}
+.chip{border:1.5px solid var(--blush);border-radius:50px;padding:9px 15px;font-size:13px;font-weight:600;cursor:pointer;transition:all .2s;background:var(--wh);color:var(--deep)}
+.chip.on{background:var(--terra);border-color:var(--terra);color:#fff}
+.tchips{display:flex;flex-wrap:wrap;gap:9px}
+.tchip{border:1.5px solid var(--blush);border-radius:50px;padding:8px 14px;font-size:13px;font-weight:600;cursor:pointer;transition:all .2s;background:var(--wh);color:var(--deep)}
+.tchip.on{background:var(--deep);border-color:var(--deep);color:#fff}
+.msub-btn{width:100%;background:var(--terra);color:#fff;border:none;border-radius:50px;padding:18px;font-size:16px;font-weight:700;font-family:'Nunito',sans-serif;cursor:pointer;margin-top:22px;box-shadow:0 8px 24px rgba(181,103,58,.35);transition:transform .2s}
+.msub-btn:active{transform:scale(0.97)}
+.mnote{text-align:center;font-size:12px;opacity:.4;margin-top:12px}
+.mcls{position:absolute;top:18px;right:18px;width:34px;height:34px;border-radius:50%;background:var(--warm);border:none;font-size:16px;cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--deep)}
+
+/* SUCCESS */
+.sscreen{display:none;text-align:center;padding:16px 0}
+.sscreen.show{display:block}
+.sico{font-size:64px;margin-bottom:18px;animation:pop .5s cubic-bezier(0.34,1.56,0.64,1)}
+@keyframes pop{0%{transform:scale(0)}100%{transform:scale(1)}}
+.stl2{font-family:'Playfair Display',serif;font-size:24px;font-weight:700;margin-bottom:10px}
+.stxt2{font-size:14px;opacity:.6;line-height:1.8;margin-bottom:24px}
+.sacts{display:flex;flex-direction:column;gap:12px}
+.btg{background:#2AABEE;color:#fff;border:none;border-radius:50px;padding:16px;font-size:15px;font-weight:700;font-family:'Nunito',sans-serif;cursor:pointer;text-decoration:none;display:block;text-align:center;box-shadow:0 6px 20px rgba(42,171,238,.35)}
+.bwa{background:#25D366;color:#fff;border:none;border-radius:50px;padding:16px;font-size:15px;font-weight:700;font-family:'Nunito',sans-serif;cursor:pointer;text-decoration:none;display:block;text-align:center;box-shadow:0 6px 20px rgba(37,211,102,.35)}
+
+/* REVEAL */
+.rv{opacity:0;transform:translateY(30px);transition:opacity .7s ease,transform .7s ease}
+.rv.in{opacity:1;transform:translateY(0)}
+.d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}.d4{transition-delay:.4s}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">Baby <span>Sarah</span></div>
+  <button class="hbtn" onclick="openModal()">📅 Buyurtma</button>
+</header>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hblob hb1"></div>
+  <div class="hblob hb2"></div>
+  <div class="badge">🟢 Bugun qabul mavjud</div>
+  <span class="hero-emoji">👶</span>
+  <h1 class="htitle">Farzandingiz uchun<br><em>eng yaxshi g'amxo'rlik</em></h1>
+  <p class="hsub">Professional bolalar massaji, osteopatiya va shifobaxsh hidjama. Uyingizga kelamiz — mehr va e'tibor bilan.</p>
+  <div class="hcta">
+    <a href="#" class="bmain" onclick="openModal();return false">📅 Seans buyurtma qilish</a>
+    <a href="#services" class="bghost">Xizmatlarni ko'rish ↓</a>
+  </div>
+  <div class="stats">
+    <div class="st"><span class="stn">100+</span><span class="stl">Mamnun mijozlar</span></div>
+    <div class="st"><span class="stn">3+</span><span class="stl">Yil tajriba</span></div>
+    <div class="st"><span class="stn">5★</span><span class="stl">Reyting</span></div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="slbl rv">Bizning xizmatlar</div>
+  <h2 class="stitle rv d1">Farzandingiz <em>sog'ligi</em> uchun</h2>
+  <p class="sdesc rv d2">Har bir bola uchun individual yondashuv. Professional usullar, iliq muhit va 100% xavfsizlik.</p>
+  <div class="slist">
+    <div class="sc rv d1">
+      <div class="si">🤲</div>
+      <div class="sb">
+        <div class="sn">Bolalar massaji</div>
+        <p class="st2">Yangi tug'ilgan chaqaloqlardan katta bolalargacha. Muskul tonusini yaxshilaydi, uyquni mustahkamlaydi, immunitetni kuchaytiradi va jismoniy rivojlanishni tezlashtiradi.</p>
+        <div class="sf">
+          <div class="sp">150 000 <small>so'm / seans</small></div>
+          <button class="sbtn" onclick="openModal('massaj')">Buyurtma →</button>
+        </div>
+      </div>
+    </div>
+    <div class="sc rv d2">
+      <div class="si">🌿</div>
+      <div class="sb">
+        <div class="sn">Osteopatiya</div>
+        <p class="st2">Bolaning jismoniy rivojlanishini qo'llab-quvvatlash. Suyak va bo'g'im muammolarini yumshoq usul bilan davolash. Tug'ruqdan keyingi korreksiya.</p>
+        <div class="sf">
+          <div class="sp">200 000 <small>so'm / seans</small></div>
+          <button class="sbtn" onclick="openModal('osteopatiya')">Buyurtma →</button>
+        </div>
+      </div>
+    </div>
+    <div class="sc rv d3">
+      <div class="si">💆</div>
+      <div class="sb">
+        <div class="sn">Shifobaxsh hidjama</div>
+        <p class="st2">An'anaviy tibbiyot usuli. Qon aylanishini yaxshilaydi, charchashni kamaytiradi, umumiy sog'liqni mustahkamlaydi. Bolalar va kattalar uchun.</p>
+        <div class="sf">
+          <div class="sp">180 000 <small>so'm / seans</small></div>
+          <button class="sbtn" onclick="openModal('hidjama')">Buyurtma →</button>
+        </div>
+      </div>
+    </div>
+    <div class="sc rv d4">
+      <div class="si">📦</div>
+      <div class="sb">
+        <div class="sn">Kurs — 10 seans</div>
+        <p class="st2">To'liq reabilitatsiya kursi. 10 seans kompleks massaj + osteopatiya + maslahat. Eng yaxshi natija uchun tavsiya etiladi. Alohida seanslarga nisbatan <strong>tejamkor!</strong></p>
+        <div class="sf">
+          <div class="sp">1 200 000 <small>so'm / kurs</small></div>
+          <button class="sbtn" onclick="openModal('kurs')">Buyurtma →</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="slbl rv">Biz haqimizda</div>
+  <h2 class="stitle rv d1">Sarah bilan <em>tanishing</em></h2>
+  <div class="acard rv d2">
+    <div class="aavatar">👩‍⚕️</div>
+    <div>
+      <div class="aname">Sarah</div>
+      <div class="arole">Bolalar massajisti · Osteopatolog<br>Sertifikatlangan mutaxassis</div>
+    </div>
+  </div>
+  <div class="flist rv d3">
+    <div class="feat"><span class="fi">🏅</span>Sertifikatlangan va tajribali mutaxassis — 3+ yil amaliyot</div>
+    <div class="feat"><span class="fi">🏠</span>Uyingizga kelish xizmati — Toshkent bo'ylab</div>
+    <div class="feat"><span class="fi">👶</span>100+ mamnun oila bilan ishlash tajribasi</div>
+    <div class="feat"><span class="fi">🧴</span>Faqat xavfsiz va sertifikatlangan moylash vositalari</div>
+    <div class="feat"><span class="fi">⏰</span>Qulay jadval — haftaning 7 kuni, 9:00–20:00</div>
+    <div class="feat"><span class="fi">💬</span>24/7 maslahat va qo'llab-quvvatlash</div>
+    <div class="feat"><span class="fi">📋</span>Har seans uchun bepul konsultatsiya</div>
+    <div class="feat"><span class="fi">🏆</span>Natijaga kafolat — yoki pulni qaytaramiz</div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section id="process">
+  <div class="slbl rv">Jarayon</div>
+  <h2 class="stitle rv d1">Qanday <em>ishlaydi?</em></h2>
+  <p class="sdesc rv d2">Siz faqat bog'lanasiz — qolganini biz hal qilamiz. 4 ta oddiy qadam.</p>
+  <div class="steps">
+    <div class="step rv d1">
+      <div class="stepn">01</div>
+      <div>
+        <div class="stept">📞 Murojaat</div>
+        <p class="stepd">Telegram, WhatsApp yoki telefon orqali bog'laning. Birinchi maslahat bepul va hech qanday majburiyatsiz.</p>
+      </div>
+    </div>
+    <div class="step rv d2">
+      <div class="stepn">02</div>
+      <div>
+        <div class="stept">💬 Konsultatsiya</div>
+        <p class="stepd">Bola haqida ma'lumot to'playmiz, muammo va maqsadni aniqlaymiz, mos xizmat va jadval tanlaymiz.</p>
+      </div>
+    </div>
+    <div class="step rv d3">
+      <div class="stepn">03</div>
+      <div>
+        <div class="stept">🚗 Tashrif</div>
+        <p class="stepd">Belgilangan vaqtda uyingizga kelamiz. Barcha kerakli jihozlar biz bilan — siz hech narsa tayyorlamasangiz bo'ladi.</p>
+      </div>
+    </div>
+    <div class="step rv d4">
+      <div class="stepn">04</div>
+      <div>
+        <div class="stept">✨ Natija va kuzatuv</div>
+        <p class="stepd">Seans tugagach natijani muhokama qilamiz, keyingi seans rejasini tuzamiz va 24/7 maslahat beramiz.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery">
+  <div class="slbl rv">Jarayondan</div>
+  <h2 class="stitle rv d1">Bizning <em>ishlarimiz</em></h2>
+  <div class="gscroll rv d2">
+    <div class="gc gc1">👶<div class="glbl">Chaqaloq massaji</div></div>
+    <div class="gc gc2">🌿<div class="glbl">Osteopatiya seansi</div></div>
+    <div class="gc gc3">💆<div class="glbl">Hidjama jarayoni</div></div>
+    <div class="gc gc4">🤲<div class="glbl">Oldin / Keyin</div></div>
+    <div class="gc gc5">🏅<div class="glbl">Sertifikatlar</div></div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section id="reviews">
+  <div class="slbl rv">Mijozlar fikri</div>
+  <h2 class="stitle rv d1">Ular nima <em>deydi?</em></h2>
+  <div class="rlist">
+    <div class="rc rv d1">
+      <div class="rstars">★★★★★</div>
+      <p class="rtxt">"O'g'lim qorin og'rig'idan aziyat chekardi. Sarah 3 seansdan keyin vaziyat butunlay o'zgardi. Juda minnatdorman!"</p>
+      <div class="rauthor"><div class="ravatar">🤱</div><div><div class="rname">Malika Y.</div><div class="rmeta">3 oylik bolaning onasi</div></div></div>
+    </div>
+    <div class="rc rv d2">
+      <div class="rstars">★★★★★</div>
+      <p class="rtxt">"Uyga kelish xizmati juda qulay! Qizimiz massajdan keyin yaxshi uxlay boshladi. Sarah juda professional va mehribon!"</p>
+      <div class="rauthor"><div class="ravatar">👩</div><div><div class="rname">Dilnoza R.</div><div class="rmeta">6 oylik bolaning onasi</div></div></div>
+    </div>
+    <div class="rc rv d3">
+      <div class="rstars">★★★★★</div>
+      <p class="rtxt">"Hidjama xizmati ajoyib natija berdi! Narxlar adolatli, sifat esa yuqori darajada. Barcha tanishlarimga tavsiya qilaman!"</p>
+      <div class="rauthor"><div class="ravatar">👨</div><div><div class="rname">Jasur M.</div><div class="rmeta">Ikki bolaning otasi</div></div></div>
+    </div>
+    <div class="rc rv d4">
+      <div class="rstars">★★★★★</div>
+      <p class="rtxt">"10 seanslik kursni tugatdik — natija hayratlanarli! Bolam endi mustaqil yura boshladi. Sarah zo'r mutaxassis, rahmat!"</p>
+      <div class="rauthor"><div class="ravatar">🌸</div><div><div class="rname">Nodira K.</div><div class="rmeta">1.5 yoshli bolaning onasi</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="slbl rv">Savol-Javob</div>
+  <h2 class="stitle rv d1">Ko'p so'raladigan <em>savollar</em></h2>
+  <div class="faqlist rv d2">
+    <div class="faqitem">
+      <div class="faqq" onclick="tfaq(this)"><span>Massaj qaysi yoshdan boshlanadi?</span><span class="faqarr">⌄</span></div>
+      <div class="faqa">Yangi tug'ilgan kundan boshlab massaj qilish mumkin. Ilk haftalarda massaj bolaning rivojlanishi uchun juda muhim. Biz 0 yoshdan 10 yoshgacha bo'lgan bolalar bilan ishlaymiz.</div>
+    </div>
+    <div class="faqitem">
+      <div class="faqq" onclick="tfaq(this)"><span>Bitta seans qancha vaqt davom etadi?</span><span class="faqarr">⌄</span></div>
+      <div class="faqa">Bolaning yoshiga qarab 20 daqiqadan 45 daqiqagacha. Yangi tug'ilgan chaqaloqlar uchun qisqaroq, katta bolalar uchun to'liq seans. Seans oldidan bepul konsultatsiya ham beramiz.</div>
+    </div>
+    <div class="faqitem">
+      <div class="faqq" onclick="tfaq(this)"><span>Uyga kelish xizmati qancha turadi?</span><span class="faqarr">⌄</span></div>
+      <div class="faqa">Toshkent shahrining ko'pgina rayonlari uchun uyga kelish bepul. Chekkadagi joylar uchun kichik qo'shimcha haq olish mumkin. Aniq narx uchun bog'laning.</div>
+    </div>
+    <div class="faqitem">
+      <div class="faqq" onclick="tfaq(this)"><span>Birinchi seans oldidan nima tayyorlash kerak?</span><span class="faqarr">⌄</span></div>
+      <div class="faqa">Seans 1–2 soat oldin bolani ovqatlantiring. Qulay, yecha oladigan kiyim kiyintiring. Iliq xona tayyorlang. Qolgan hamma narsani biz hal qilamiz!</div>
+    </div>
+    <div class="faqitem">
+      <div class="faqq" onclick="tfaq(this)"><span>To'lov qanday amalga oshiriladi?</span><span class="faqarr">⌄</span></div>
+      <div class="faqa">Seans tugagach naqd pul yoki bank kartasi orqali to'lash mumkin. Kurs uchun 50% oldindan to'lov qilinadi. Barcha narxlar kelishish bo'yicha.</div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section id="cta">
+  <div class="slbl rv">Hoziroq boshlang</div>
+  <h2 class="stitle rv d1">Bepul <em>konsultatsiya</em> oling</h2>
+  <p class="sdesc rv d2">Savollaringiz bormi? Hoziroq bog'laning — 1 soat ichida javob beramiz! Birinchi maslahat mutlaqo bepul.</p>
+  <button class="bmain rv d3" style="max-width:320px;margin:0 auto 24px;display:block;border:none;cursor:pointer" onclick="openModal()">📅 Seans buyurtma qilish</button>
+  <div class="ctabtns rv d4">
+    <a href="https://t.me/baby_massage_bysarah" class="cbt ctg">✈️ Telegram orqali yozish</a>
+    <a href="https://wa.me/998901234567" class="cbt cwa">💬 WhatsApp orqali yozish</a>
+    <a href="tel:+998901234567" class="cbt cph">📞 Qo'ng'iroq qilish</a>
+  </div>
+</section>
+
+<footer>
+  <p><span>Baby Massage by Sarah</span> · Toshkent, O'zbekiston</p>
+  <p style="margin-top:8px">© 2025 · Barcha huquqlar himoyalangan</p>
+</footer>
+
+<!-- BOOKING MODAL -->
+<div class="overlay" id="overlay" onclick="handleOvl(event)">
+  <div class="modal" id="modal">
+    <button class="mcls" onclick="closeModal()">✕</button>
+    <div class="mhandle"></div>
+
+    <div id="formSc">
+      <div class="mtitle">📅 Seans buyurtma qilish</div>
+      <div class="msub">To'ldiring — biz siz bilan bog'lanamiz</div>
+
+      <div class="fg">
+        <label class="flbl">Ismingiz *</label>
+        <input class="finp" id="iname" type="text" placeholder="Masalan: Malika">
+      </div>
+      <div class="fg">
+        <label class="flbl">Telefon *</label>
+        <input class="finp" id="iphone" type="tel" placeholder="+998 90 000 00 00">
+      </div>
+      <div class="fg">
+        <label class="flbl">Bolaning yoshi</label>
+        <select class="fsel" id="iage">
+          <option value="">Tanlang</option>
+          <option>0–1 oy</option>
+          <option>1–3 oy</option>
+          <option>3–6 oy</option>
+          <option>6–12 oy</option>
+          <option>1–3 yosh</option>
+          <option>3–7 yosh</option>
+          <option>7+ yosh</option>
+        </select>
+      </div>
+      <div class="fg">
+        <label class="flbl">Xizmat turi *</label>
+        <div class="chips">
+          <div class="chip" onclick="selChip(this,'svc')">🤲 Massaj</div>
+          <div class="chip" onclick="selChip(this,'svc')">🌿 Osteopatiya</div>
+          <div class="chip" onclick="selChip(this,'svc')">💆 Hidjama</div>
+          <div class="chip" onclick="selChip(this,'svc')">📦 Kurs (10 seans)</div>
+        </div>
+      </div>
+      <div class="fg">
+        <label class="flbl">Qulay vaqt</label>
+        <div class="tchips">
+          <div class="tchip" onclick="selChip(this,'t')">Ertalab 9–12</div>
+          <div class="tchip" onclick="selChip(this,'t')">Kunduzi 12–16</div>
+          <div class="tchip" onclick="selChip(this,'t')">Kechqurun 16–20</div>
+        </div>
+      </div>
+      <div class="fg">
+        <label class="flbl">Manzil (tuman / ko'cha)</label>
+        <input class="finp" id="iaddr" type="text" placeholder="Masalan: Chilonzor tumani">
+      </div>
+      <div class="fg">
+        <label class="flbl">Qo'shimcha xabar</label>
+        <textarea class="ftxt" id="imsg" placeholder="Muammo yoki savollaringizni yozing…"></textarea>
+      </div>
+      <button class="msub-btn" onclick="submitForm()">✅ Buyurtma yuborish</button>
+      <div class="mnote">Biz 1–2 soat ichida siz bilan bog'lanamiz</div>
+    </div>
+
+    <div class="sscreen" id="succSc">
+      <div class="sico">🎉</div>
+      <div class="stl2">Buyurtma qabul qilindi!</div>
+      <p class="stxt2">Rahmat! Biz siz bilan tez orada bog'lanamiz. Shu orada Telegram yoki WhatsApp orqali ham yozishingiz mumkin.</p>
+      <div class="sacts">
+        <a href="https://t.me/baby_massage_bysarah" class="btg">✈️ Telegramda yozish</a>
+        <a href="https://wa.me/998901234567" class="bwa">💬 WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+function openModal(svc) {
+  document.getElementById('overlay').classList.add('active');
+  document.body.style.overflow = 'hidden';
+  if(svc) {
+    const map = {massaj:'🤲 Massaj',osteopatiya:'🌿 Osteopatiya',hidjama:'💆 Hidjama',kurs:'📦 Kurs (10 seans)'};
+    document.querySelectorAll('.chip').forEach(c => c.classList.toggle('on', c.textContent.trim() === map[svc]));
+  }
+}
+function closeModal() {
+  document.getElementById('overlay').classList.remove('active');
+  document.body.style.overflow = '';
+}
+function handleOvl(e) { if(e.target === document.getElementById('overlay')) closeModal(); }
+
+function selChip(el, grp) {
+  const parent = el.closest('.chips,.tchips');
+  parent.querySelectorAll('.chip,.tchip').forEach(c => c.classList.remove('on'));
+  el.classList.add('on');
+}
+
+function tfaq(el) {
+  const item = el.closest('.faqitem');
+  const was = item.classList.contains('open');
+  document.querySelectorAll('.faqitem').forEach(i => i.classList.remove('open'));
+  if(!was) item.classList.add('open');
+}
+
+function submitForm() {
+  const name = document.getElementById('iname').value.trim();
+  const phone = document.getElementById('iphone').value.trim();
+  if(!name || !phone) { alert('Iltimos, ismingiz va telefon raqamingizni kiriting.'); return; }
+  document.getElementById('formSc').style.display = 'none';
+  document.getElementById('succSc').classList.add('show');
+}
+
+// Scroll reveal
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('in'); });
+}, { threshold: 0.1 });
+document.querySelectorAll('.rv').forEach(el => obs.observe(el));
+</script>
+</body>
+</html>
